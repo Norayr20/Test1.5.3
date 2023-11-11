@@ -1,18 +1,20 @@
 public class Numbers {
     public static void main(String[] args) {
-        int[] array1 = new int[]{0,1,2,3,4,5,6,7,7};
-        printArray(array1);
-    }
-    public static void printArray(int[] numbers) {
-        System.out.println("[");
-        for (int a = 0; a < numbers.length; a++) {
-            if (a < numbers.length - 1)
+            int[] numbers = {1, 2, 3, 4, 5, 5, 6, 7, 7};
+            printArray(numbers);
 
-                System.out.println(numbers[a] + ",");
-        else {
-                System.out.println(numbers[a]);
-            }
+            int[] emptyArray = {};
+            printArray(emptyArray);
         }
-        System.out.println("]");
+
+        public static void printArray ( int[] numbers){
+            System.out.print("[");
+            for (int i = 0; i < numbers.length; i++) {
+                if (i > 0) {
+                    System.out.print(", ");
+                }
+                System.out.print(numbers[i]);
+            }
+            System.out.println("]");
+        }
     }
-}
